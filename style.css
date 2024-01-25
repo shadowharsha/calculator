@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 62.5%;
+    --body-font: "Poppins", sans-serif;
+}
+
+body{
+    font-family: var(--body-font);
+    font-size: 1.6rem;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #fff;
+}
+
+.calculator{
+    width: 25%;
+    border-radius: 0.4rem;
+    background: #4b5563;
+    box-shadow: 0px 0px 10px 5px rgba(156,163,175,1);
+}
+
+/* display */
+
+.display{
+    width: 100%;
+    text-align: right;
+    background: #d1d5db;
+    border: 1.2rem solid #374151;
+    font-family: "VT323", monospace;
+}
+
+#firstOperand{
+    visibility: hidden;
+}
+
+.result{
+    font-size: 3.6rem;
+    margin-right: 4rem;
+    visibility: hidden;
+}
+
+.input{
+    font-size: 2.2rem;
+    opacity: 80%;
+    letter-spacing: 0.1rem;
+    margin-right: 4rem;
+}
+
+/* panel */
+.panel{
+    font-size: 1.6rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 2rem;
+    margin: 4rem;
+}
+
+.panel div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    cursor: pointer;
+    background: #64E791;
+    border-radius: 0.4rem;
+    box-shadow: 0px 0px 10px 3px rgba(55,65,81,1);
+}
+
+#plus, #subtract, #multiply, #divide, #equalto{
+    font-size: 1.8rem;
+    background: #fdba74;
+}
+
+#allClear{
+    background: #f87171;
+}
+
+#zero{
+    grid-row: 5 / 6;
+    grid-column: 1 / 3;
+}
+
